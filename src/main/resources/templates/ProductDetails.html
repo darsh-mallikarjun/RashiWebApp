@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='' th:href="@{/CSS/rashisignup.css}">
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div th:if="${param.success}">You've successfully registered to our rashi</div>
+   
+    <div class="wrapper">
+        <form  th:action="@{/admin/saveproduct}"  th:object="${product}" method="post">
+        <h3>ADD PRODUCTS</h3>
+       <img src="" class="profile" th:src="@{/img/rashisignup.png}" alt="" />
+       
+       <input type="hidden" th:field="*{id}">
+     <div class="input-box">
+     <input type="text" th:field="*{address}" id="email" placeholder="Address" required/></div><br>
+      <div class="input-box">
+     <input type="text" th:field="*{price}" id="name" placeholder="Price" required/></div><br>
+     <div class="input-box">
+     <input type="text"  th:field="*{plot_area}" id="password" placeholder="plot_area" required/></div><br>
+     <div class="input-box">
+      <input type="text" th:field="*{dimensions}" id="number" placeholder="dimensions" required/></div><br>
+      <div class="input-box">
+      <input type="file" th:field="*{image}" id="number" placeholder="image" required/></div>
+        <button type="submit" class="btn">Add</button>
+        <div class="login-link">
+            <p>View Products Booked?<a th:href="@{/admin/ListBooked}">View</a></p>
+      </div>
+     </form>
+     </div>
+     
+</body>
+</html>

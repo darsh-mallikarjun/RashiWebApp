@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/RashiApplication-0.0.1-SNAPSHOT.jar  rashiapplication.jar
+COPY target/*.jar  rashiapplication1.jar
+ENTRYPOINT [ "java" , "-jar" ,"/rashiapplication1.jar"]
 EXPOSE 8080
-ENTRYPOINT [ "java" , "-jar" ,"rashiapplication.jar"]

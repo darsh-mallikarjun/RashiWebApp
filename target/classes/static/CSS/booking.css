@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body{
+	background: url(/img/book1.jpg);
+	 background-size: cover;
+	 background-position: center;
+	 
+}
+
+
+.popup{
+	width: 400px;
+	background: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left:50%;
+	transform: translate(-50% , -50%) scale(0.1);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: tranform 0.4s , top 0.4s;
+	
+}
+
+.open-popup{
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50% , -50%) scale(1);
+}
+
+.popup img{
+	width: 100px;
+	margin-top: -50px;
+	border-radius: -50%;
+	
+}
+.popup h2{
+	font-size: 38px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+}
+.popup button{
+	width: 100%;
+	margin-top: 50px;
+	padding: 10px 0;
+	background: #6fd649;
+	color: #fff;
+	border: 0;
+	outline:none;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0 , 0 , 0, 0.2);
+}
+.container{
+  padding-top: 50px;
+}
+
+.product-grid{
+  padding-bottom: 20px;
+  padding-top: 20px ;
+  background: #fff;
+}
+.product-grid{
+  box-shadow:  0 4px 8px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.image{
+  position: relative;
+}
+.cancel{
+  background-color: transparent;
+  color: #434444;
+  border-radius: 0;
+  border: 1px solid #434444;
+  width: 100%;
+  margin-top: 20px;
+
+}

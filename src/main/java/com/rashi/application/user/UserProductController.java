@@ -28,7 +28,7 @@ public class UserProductController {
 	
 	@GetMapping("/login")
 	public String loginpage(){
-		return "rashilogin";
+		return "rashiLogin";
 	}
 				
 	@PostMapping("/logout")

@@ -51,6 +51,10 @@ public void deleteById(int theId) {
 	return null;
 		 
 	}
+	public Admin create(Admin admin) {
+		return adminRepo.save(admin);
+		
+	}
 
 	
 }

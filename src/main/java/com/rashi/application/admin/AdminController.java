@@ -9,8 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.rashi.application.dto.LoginUser;
 import com.rashi.application.dto.ProductPlotDto;
@@ -40,6 +42,12 @@ public class AdminController {
 	@GetMapping("/admin")
 	public String AdminLogin() {
 		return "adminlogin";
+	}
+	
+	
+	@PostMapping("/add")
+	public Admin saveadmin(@RequestBody Admin admin) {
+		return adminService.create(admin);
 	}
 			
 	@PostMapping("/adminlogout")

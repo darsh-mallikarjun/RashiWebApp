@@ -32,21 +32,16 @@
      <input type="hidden" id="address" th:field="*{product.dimensions}">
      <input type="hidden" id="address" th:field="*{product.image}">
        
-    <button onclick="if (!( confirm('Do you to like confirm booking?'))) return false"  type="submit" class=" center btn btn-primary btn-sm cancel" >Confirm</button>    
+    <button onclick="if (!( confirm('Do you to like confirm booking?'))) return false"  type="submit" class=" center btn btn-primary btn-sm confirm" >Confirm</button>    
           
-    <a onclick="if (!(confirm('Do you like cancle confirm booking?'))) return false" class="btn btn-primary btn-sm cancel" href="@{/welcomelog}">Cancel</a>
+    
  </form>
+   <a onclick="if (!(confirm('Do you like cancle confirm booking?'))) return false" class="btn btn-primary btn-sm cancel" th:href="@{/cancel}">Cancel</a>
+ 
  </div>
+ 
  </div>
  </div>
      </div>
-   <script type="text/JavaScript" th:src="@{/js/confirm.js}"></script>
-    <div class="popup" id="popup">
-    <img alt="" src="" th:src="@{/img/check.png}">
-    <h2>Thank You!</h2>
-    <p>Your Booking has been successfully submitted.Vist Rashi Again!!</p>
-    <button type="button" >OK</button>
-    </div>
-    
 </body>
 </html>

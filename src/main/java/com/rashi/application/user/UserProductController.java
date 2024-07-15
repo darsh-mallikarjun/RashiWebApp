@@ -71,13 +71,18 @@ public class UserProductController {
 		
 		return "booking-details";
 	}
+	  @GetMapping("/cancel")
+		public String cancelpage(){
+			return "cancel";
+		}
+	  
 	  
 		@PostMapping("/save")
 		public String registerUser( BookingDto BookingDetialsDto, Model model, HttpSession httpSession  ) {
 			User user =(User) httpSession.getAttribute("user");
 			model.addAttribute("user", user);
 			 userProductService.save(BookingDetialsDto);
-			return "redirect:/welcomelog";	
+			return "success";	
 	}
 		
 }

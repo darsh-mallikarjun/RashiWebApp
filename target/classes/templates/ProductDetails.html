@@ -13,7 +13,7 @@
     <div th:if="${param.success}">You've successfully registered to our rashi</div>
    
     <div class="wrapper">
-        <form  th:action="@{/admin/saveproduct}"  th:object="${product}" method="post">
+        <form  th:action="@{/saveproduct}"  th:object="${product}" method="post">
         <h3>ADD PRODUCTS</h3>
        <img src="" class="profile" th:src="@{/img/rashisignup.png}" alt="" />
        
@@ -30,7 +30,7 @@
       <input type="file" th:field="*{image}" id="number" placeholder="image" required/></div>
         <button type="submit" class="btn">Add</button>
         <div class="login-link">
-            <p>View Products Booked?<a th:href="@{/admin/ListBooked}">View</a></p>
+            <p>View Products Booked?<a th:href="@{/ListBooked}">View</a></p>
       </div>
      </form>
      </div>
